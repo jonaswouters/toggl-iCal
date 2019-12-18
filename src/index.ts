@@ -58,6 +58,7 @@ function createCal({ entries }: { entries: TogglEntryWithProject[] }) {
 
     const projectName = entry.project ? entry.project.name : 'n/a'
     cal.createEvent({
+      uid: entry.id,
       start: moment(entry.start),
       end: moment(entry.stop),
       summary: `${icon} ${projectName}: ${
